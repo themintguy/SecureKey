@@ -1,4 +1,4 @@
-import ThemeDropdown from "../theme/ThemeDropdown";
+
 import Footer from "./Footer";
 import Generate from "./Generate";
 import Navbar from "./Navbar";
@@ -7,8 +7,7 @@ import TestimonailCard from "./TestimonialCard";
 const Home = () => {
   return (
     <>
-      {/* <h1 className="dark:text-3xl dark:bg-black">hello there</h1>
-    <ThemeDropdown/> */}
+      
       <div className=" bg-[var(--color-night)]">
         <Navbar />
         <Generate />
