@@ -1,2 +1,12 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    --color-night : #111111;
+    --color-leaf : #f5f5f4;
+    --color-ocean : #16a34a;
+    --color-cream : #e2e8f0;
+    --color-sunset : #f472b6;
+    --color-room: #2d2d2d;
+
+}
