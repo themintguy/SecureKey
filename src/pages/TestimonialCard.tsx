@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FaStar, FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 
 interface TestimonailCardProps {
