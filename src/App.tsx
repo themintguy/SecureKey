@@ -1,8 +1,12 @@
-import MainRoutes from "./routes/MainRoutes"
-
+// import MainRoutes from "./routes/MainRoutes"
+import Home from "./pages/Home"
 const App = () => {
   return (
-    <MainRoutes/>
+    // <MainRoutes/>
+    <div className="bg-[var(--color-night)]">
+       <Home/>
+      </div>
+   
   )
 }
 

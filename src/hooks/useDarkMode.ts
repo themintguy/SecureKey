@@ -19,17 +19,18 @@ export const useDarkMode = () => {
     return "system";
   });
 
-  const applyTheme = (currentTheme: Theme) => {
-    const effectiveTheme =
-      currentTheme === "system" ? getPreferredTheme() : currentTheme;
-
-    document.documentElement.classList.toggle(
-      "dark",
-      effectiveTheme === "dark"
-    );
-  };
-
+ 
   useEffect(() => {
+    const applyTheme = (currentTheme: Theme) => {
+      const effectiveTheme =
+        currentTheme === "system" ? getPreferredTheme() : currentTheme;
+
+      document.documentElement.classList.toggle(
+        "dark",
+        effectiveTheme === "dark"
+      );
+    };
+
     applyTheme(theme);
 
     if (theme === "light" || theme === "dark") {
@@ -41,6 +42,16 @@ export const useDarkMode = () => {
 
 
   useEffect(() => {
+    const applyTheme = (currentTheme: Theme) => {
+      const effectiveTheme =
+        currentTheme === "system" ? getPreferredTheme() : currentTheme;
+
+      document.documentElement.classList.toggle(
+        "dark",
+        effectiveTheme === "dark"
+      );
+    };
+
     const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
     const handler = () => {
       if (theme === "system") {
