@@ -9,7 +9,7 @@ interface TestimonailCardProps {
 }
 
 function TestimonailCard({ name, place, review, image }: TestimonailCardProps) {
-  return (
+  return ( 
     <div className="flex flex-col md:flex-row justify-between items-center gap-8 w-full px-6 md:px-16 py-8">
 
       <div className="md:w-1/2 w-full text-[var(--color-leaf)] text-base sm:text-xl leading-relaxed">

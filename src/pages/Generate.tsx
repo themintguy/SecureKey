@@ -25,7 +25,7 @@ function Generate() {
   }
 
   const HandlePassword = () => {
-    let allChars = []
+    const allChars = []
     if (UpperCase) allChars.push(...getRandomChars(UpperCaseChars))
     if (LowerCase) allChars.push(...getRandomChars(LowerCaseChars))
     if (Numbers) allChars.push(...getRandomChars(numbersChars))
