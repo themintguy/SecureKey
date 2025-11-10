@@ -35,6 +35,9 @@ function Generate() {
       setAlert("Please select options to generate password")
       return
     }
+    if(allChars.length !== 0){
+      setAlert("")
+    }
 
     let newPassword = ""
     for (let i = 0; i < Length; i++) {
@@ -48,6 +51,10 @@ function Generate() {
   const copy = async ()=>{
     await navigator.clipboard.writeText(Password)
   }
+
+  // useEffect(()=>{
+  //   HandlePassword()
+  // },[])
 
   return (
     <div className="text-[var(--color-leaf)] w-full max-w-md sm:max-w-lg lg:max-w-xl mx-auto mt-20 p-4">
@@ -75,25 +82,26 @@ function Generate() {
           min={4}
           className="w-full"
           onChange={(e) => setLength(Number(e.target.value))}
+          onClick={HandlePassword}
         />
         <p className="text-[var(--color-ocean)] font-bold">{Length}</p>
       </div>
 
       <div className="flex flex-col gap-3 mt-4 bg-[var(--color-room)] p-6 rounded">
         <div className="flex items-center gap-2">
-          <input type="checkbox" className="w-4 h-4" onChange={() => setUppercase(!UpperCase)} />
+          <input type="checkbox" className="w-4 h-4" onClick={HandlePassword} onChange={() => setUppercase(!UpperCase)} />
           <p className="font-bold">Upper Case</p>
         </div>
         <div className="flex items-center gap-2">
-          <input type="checkbox" className="w-4 h-4" onChange={() => setLowercase(!LowerCase)} />
+          <input type="checkbox" className="w-4 h-4" onClick={HandlePassword} onChange={() => setLowercase(!LowerCase)} />
           <p className="font-bold">Lower Case</p>
         </div>
         <div className="flex items-center gap-2">
-          <input type="checkbox" className="w-4 h-4" onChange={() => setNumbers(!Numbers)} />
+          <input type="checkbox" className="w-4 h-4" onClick={HandlePassword} onChange={() => setNumbers(!Numbers)} />
           <p className="font-bold">Number</p>
         </div>
         <div className="flex items-center gap-2">
-          <input type="checkbox" className="w-4 h-4" onChange={() => setSymbols(!Symbols)} />
+          <input type="checkbox" className="w-4 h-4" onClick={HandlePassword} onChange={() => setSymbols(!Symbols)} />
           <p className="font-bold">Symbols</p>
         </div>
 
